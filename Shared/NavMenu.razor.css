@@ -1,0 +1,41 @@
+/* NavMenu CSS */
+.heading {
+    background-color: #f5f3ef;
+    height: 100px;
+    padding-top: 25px;
+    padding-left: 25px;
+}
+
+.navbar-brand {
+    font-size: 50px;
+    text-decoration: none;
+    color: #735751;
+}
+
+.navMenu {
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    background-color: #f5f3ef;
+    position: absolute;
+    height: 100%;
+    overflow: auto;
+}
+
+.navMenu a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.nav-item {
+    background-color: #DDD8D0;
+    color: white;
+    width: 200px;
+    margin: 10px;
+    text-decoration: none;
+    border: solid 1px #929292;
+    text-align: center;
+    padding: 10px;
+}

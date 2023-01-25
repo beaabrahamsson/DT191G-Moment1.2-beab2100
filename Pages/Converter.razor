@@ -1,0 +1,44 @@
+﻿@page "/converter"
+
+<PageTitle>Konvertera temperatur</PageTitle>
+
+<h2>Konvertera meter till fot (feet)</h2>
+<div class="form">
+	<label for="meter">Meter:</label>
+	<input type="number" class="form-control" @bind="meter" />
+	<button class="button" @onclick="ConvertMeter">Konvertera</button>
+	<br />
+	<h3>Avstånd i feet: @roundedFeet</h3>
+</div>
+
+<h2>Konvertera km/h till miles/hour</h2>
+<div class="form">
+<label for="kilometers">km/h:</label>
+<input type="number" class="form-control" @bind="kilometers" />
+<button class="button" @onclick="ConvertKilometers">Konvertera</button>
+<br />
+<h3>Hastighet i miles/hour: @roundedMiles </h3>
+</div>
+
+@code {
+	//Convert meter to feet
+	private double feet;
+	private double meter = 2;
+	private double roundedFeet;
+
+	private void ConvertMeter()
+	{
+		feet = meter * 3.2808399;
+		roundedFeet = Math.Round(feet, 2); //round to two decimals
+	}
+
+	//Convert km/h to miles/h
+	private double miles;
+	private double kilometers = 100;
+	private double roundedMiles;
+	private void ConvertKilometers()
+	{
+		miles = kilometers / 1.6;
+		roundedMiles = Math.Round(miles); //round to integer 
+	}
+}
